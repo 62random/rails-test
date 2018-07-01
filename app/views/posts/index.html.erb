@@ -1,8 +1,18 @@
-<h1>Blog Posts</h1>
-<% @posts.each do |post| %>
-  <div class="card card-body bg-light">
-    <h3> <%= post.title %></h3>
-    <p> <%= post.body %></p>
-    <%= link_to "Read More", post_path(post), :class => 'btn btn-secondary mr-auto' %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1>Blog Posts</h1>
+      <% @posts.reverse.each do |post| %>
+      <div class="card card-body bg-light">
+        <h3> <%= post.title %></h3>
+        <p> <%= raw post.body %></p>
+        <%= link_to "Read More", post_path(post), :class => 'btn btn-secondary mr-auto' %>
+      </div>
+      <br />
+      <% end %>
+    </div>
+    <div class="col-sm">
+      <h1>Patrocinadores</h1>
+    </div>
   </div>
-<% end %>
+</div>
