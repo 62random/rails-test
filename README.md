@@ -7,4 +7,3 @@ Requirements:
 
 * Rails framework
 
-* encher 10
